@@ -9,18 +9,22 @@
 'use strict';
 
 var huxley = require('huxley');
+var exec = require('child_process').exec;
+
 
 module.exports = function(grunt) {
   grunt.registerMultiTask('huxley', 'Grunt task for node-huxley.', function() {
-    var browser = this.options.browser;
-    var path;
-    if (this.files[0] && this.files[0].src) {
-      path = this.files[0].src;
-    }
+    var browser = this.options().browser;
+    // grunt auto transforms the glob pattern into an array of src files. Huxley
+    // doesn't need this since it takes care of doing that itself. So directly
+    // access the raw src string here. Only the first one's taken
+    // TODO: change Huxley's behavior to match this?
+    var path = this.data.src ? this.data.src[0] : null;
 
-    switch (this.options.action) {
+    var done = this.async();
+    switch (this.options().action) {
       case 'record':
-        huxley.recordTasks(browser);
+        huxley.recordTasks(browser, path);
         return true;
       case 'update':
         huxley.playbackTasksAndSaveScreenshots(browser, path);

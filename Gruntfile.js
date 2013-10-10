@@ -13,14 +13,13 @@ module.exports = function(grunt) {
     huxley: {
       all: {
         options: {
-          action: 'record'
+          action: 'playback'
         },
-        // src: ['./tests']
+        src: ['./tests/**/']
       }
     }
   });
 
-  // Actually load this plugin's task(s).
   grunt.loadTasks('tasks');
 
   grunt.registerTask('default', ['huxley']);
