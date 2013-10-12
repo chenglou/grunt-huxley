@@ -4,24 +4,17 @@
   },
   {
     "action": "click",
-    "y": 59,
+    "y": 66,
+    "x": 58
+  },
+  {
+    "action": "click",
+    "y": 60,
     "x": 56
   },
   {
     "action": "keypress",
-    "key": "b"
-  },
-  {
-    "action": "keypress",
-    "key": "e"
-  },
-  {
-    "action": "keypress",
-    "key": "t"
-  },
-  {
-    "action": "keypress",
-    "key": "t"
+    "key": "h"
   },
   {
     "action": "keypress",
@@ -33,7 +26,16 @@
   },
   {
     "action": "keypress",
-    "key": ","
+    "key": "e"
+  },
+  {
+    "action": "keypress",
+    "key": " "
+  },
+  {
+    "action": "click",
+    "y": 59,
+    "x": 148
   },
   {
     "action": "keypress",
@@ -57,23 +59,19 @@
   },
   {
     "action": "keypress",
-    "key": "ARROW_RIGHT"
+    "key": "m"
   },
   {
     "action": "keypress",
-    "key": "ARROW_RIGHT"
+    "key": "o"
   },
   {
     "action": "keypress",
-    "key": "ARROW_RIGHT"
+    "key": "r"
   },
   {
     "action": "keypress",
-    "key": "ARROW_RIGHT"
-  },
-  {
-    "action": "keypress",
-    "key": "ARROW_RIGHT"
+    "key": "e"
   },
   {
     "action": "keypress",
