@@ -13,14 +13,17 @@ module.exports = function(grunt) {
     huxley: {
       all: {
         options: {
-          action: 'playback'
+          action: ''
         },
-        src: ['./tests/**/']
+        src: ['./tests/1 only one task out of two']
+      },
+      errors: {
+        src: ['./tests/**']
       }
     }
   });
 
   grunt.loadTasks('tasks');
 
-  grunt.registerTask('default', ['huxley']);
+  grunt.registerTask('default', ['huxley:all', 'huxley:errors']);
 };
