@@ -17,13 +17,22 @@ module.exports = function(grunt) {
     var path = this.filesSrc;
 
     var done = this.async();
+    function doneCallback(err) {
+      if (err) {
+        grunt.log.error(err);
+        return done(false);
+      }
+      done();
+    }
     switch (this.options().action) {
       case 'record':
-        huxley.recordTasks(browser, path, done);
+        huxley.recordTasks(browser, path, doneCallback);
+        break;
       case 'update':
-        huxley.playbackTasksAndSaveScreenshots(browser, path, done);
+        huxley.playbackTasksAndSaveScreenshots(browser, path, doneCallback);
+        break;
       default:
-        huxley.playbackTasksAndCompareScrenshots(browser, path, done);
+        huxley.playbackTasksAndCompareScreenshots(browser, path, doneCallback);
     }
   });
 };

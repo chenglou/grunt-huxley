@@ -13,12 +13,12 @@ module.exports = function(grunt) {
     huxley: {
       all: {
         options: {
-          action: ''
+          action: 'record'
         },
-        src: ['./tests/1 only one task out of two']
+        src: ['./tests/passes/**']
       },
       errors: {
-        src: ['./tests/**']
+        src: ['./tests/fails/**']
       }
     }
   });
