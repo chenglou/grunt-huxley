@@ -24,7 +24,8 @@ If you're already familiar with [node-huxley](https://github.com/chenglou/node-h
 
 One of `record`, `playback` and `update`. Default is `playback`.
 
-... That's all.
+#### browser
+Either "firefox" or "chrome".
 
 For source files, specify them the usual [grunt way](http://gruntjs.com/configuring-tasks#files).
 
@@ -38,7 +39,7 @@ module.exports = function(grunt) {
         options: {
           action: 'update'
         },
-        src: ['./folderInWhichTheHuxleyfileJsonResides', 
+        src: ['./folderInWhichTheHuxleyfileJsonResides',
               '/folder2WithNestedFolders/**']
       }
   });
