@@ -18,6 +18,7 @@ module.exports = function(grunt) {
         src: ['./tests/passes/**']
       },
       errors: {
+        // should fail right on the first test
         src: ['./tests/fails/**']
       }
     }
