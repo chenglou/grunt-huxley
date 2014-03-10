@@ -14,6 +14,7 @@ var exec = require('child_process').exec;
 module.exports = function(grunt) {
   grunt.registerMultiTask('huxley', 'Grunt task for node-huxley.', function() {
     var browser = this.options().browser;
+    var serverUrl = this.options().server;
     var path = this.filesSrc;
 
     var done = this.async();
@@ -26,13 +27,13 @@ module.exports = function(grunt) {
     }
     switch (this.options().action) {
       case 'record':
-        huxley.recordTasks(browser, path, doneCallback);
+        huxley.recordTasks(browser, serverUrl, path, doneCallback);
         break;
       case 'update':
-        huxley.playbackTasksAndSaveScreenshots(browser, path, doneCallback);
+        huxley.playbackTasksAndSaveScreenshots(browser, serverUrl, path, doneCallback);
         break;
       default:
-        huxley.playbackTasksAndCompareScreenshots(browser, path, doneCallback);
+        huxley.playbackTasksAndCompareScreenshots(browser, serverUrl, path, doneCallback);
     }
   });
 };

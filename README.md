@@ -29,6 +29,16 @@ Either "firefox" or "chrome".
 
 For source files, specify them the usual [grunt way](http://gruntjs.com/configuring-tasks#files).
 
+#### server
+Either "firefox" or "chrome".
+
+Defaults to Selenium's defaults:
+
+  - Chrome: 'http://localhost:9515'
+  - Firefox: 'http://localhost:4444/wd/hub'
+
+Used if you want to run Huxley remotely.
+
 ### Example
 
 ```js
