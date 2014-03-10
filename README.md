@@ -30,14 +30,13 @@ Either "firefox" or "chrome".
 For source files, specify them the usual [grunt way](http://gruntjs.com/configuring-tasks#files).
 
 #### server
-Either "firefox" or "chrome".
+Used to run Huxley on a remote Selenium server.
 
-Defaults to Selenium's defaults:
+Defaults to Selenium's defaults for each browser:
 
   - Chrome: 'http://localhost:9515'
   - Firefox: 'http://localhost:4444/wd/hub'
 
-Used if you want to run Huxley remotely.
 
 ### Example
 
@@ -48,6 +47,29 @@ module.exports = function(grunt) {
       all: {
         options: {
           action: 'update'
+        },
+        src: ['./folderInWhichTheHuxleyfileJsonResides',
+              '/folder2WithNestedFolders/**']
+      }
+  });
+
+  grunt.loadNpmTasks('grunt-huxley');
+
+  grunt.registerTask('default', ['huxley:all']);
+};
+```
+
+### Remote Selenium Server Example
+
+```js
+module.exports = function(grunt) {
+  grunt.initConfig({
+    huxley: {
+      all: {
+        options: {
+          action: 'update',
+          browser: 'firefox',
+          server: 'http://somedomainName:4440/wd/hub'
         },
         src: ['./folderInWhichTheHuxleyfileJsonResides',
               '/folder2WithNestedFolders/**']
