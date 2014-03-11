@@ -40,7 +40,7 @@ Defaults to Selenium's defaults for each browser:
 
 ### Examples
 
-#### Locally
+#### Locally:
 
 ```js
 module.exports = function(grunt) {
