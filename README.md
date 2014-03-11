@@ -59,7 +59,7 @@ module.exports = function(grunt) {
 };
 ```
 
-### Remote Selenium Example:
+### Remote Selenium Server:
 
 ```js
 module.exports = function(grunt) {
