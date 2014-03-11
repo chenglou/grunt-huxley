@@ -59,7 +59,7 @@ module.exports = function(grunt) {
 };
 ```
 
-### Remote Selenium Server Example
+### Remote Selenium Example:
 
 ```js
 module.exports = function(grunt) {
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
     huxley: {
       all: {
         options: {
-          action: 'update',
+          action: 'record',
           browser: 'firefox',
           server: 'http://somedomainName:4440/wd/hub'
         },
