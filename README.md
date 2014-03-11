@@ -38,7 +38,9 @@ Defaults to Selenium's defaults for each browser:
   - Firefox: 'http://localhost:4444/wd/hub'
 
 
-### Example
+### Examples
+
+#### Locally:
 
 ```js
 module.exports = function(grunt) {
@@ -59,7 +61,7 @@ module.exports = function(grunt) {
 };
 ```
 
-### Remote Selenium Server:
+#### Remotely:
 
 ```js
 module.exports = function(grunt) {
@@ -67,7 +69,7 @@ module.exports = function(grunt) {
     huxley: {
       all: {
         options: {
-          action: 'record',
+          action: 'playback',
           browser: 'firefox',
           server: 'http://somedomainName:4440/wd/hub'
         },
