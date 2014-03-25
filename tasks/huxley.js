@@ -17,6 +17,9 @@ module.exports = function(grunt) {
     var serverUrl = this.options().server;
     var path = this.filesSrc;
 
+    if (this.options().driver)
+      huxley.injectDriver(this.options().driver());
+
     var done = this.async();
     function doneCallback(err) {
       if (err) {
