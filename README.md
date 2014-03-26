@@ -37,6 +37,8 @@ Defaults to Selenium's defaults for each browser:
   - Chrome: 'http://localhost:9515'
   - Firefox: 'http://localhost:4444/wd/hub'
 
+#### driver
+You can specify your own driver. Create anonymous function which returns your driver.
 
 ### Examples
 
@@ -72,6 +74,40 @@ module.exports = function(grunt) {
           action: 'playback',
           browser: 'firefox',
           server: 'http://somedomainName:4440/wd/hub'
+        },
+        src: ['./folderInWhichTheHuxleyfileJsonResides',
+              '/folder2WithNestedFolders/**']
+      }
+  });
+
+  grunt.loadNpmTasks('grunt-huxley');
+
+  grunt.registerTask('default', ['huxley:all']);
+};
+```
+
+#### [BrowserStack](http://www.browserstack.com):
+```js
+var webdriver = require('browserstack-webdriver');
+
+module.exports = function(grunt) {
+  grunt.initConfig({
+    huxley: {
+      all: {
+        options: {
+          action: 'playback',
+          driver: function () {
+            var capabilities = {
+              'browserName' : 'firefox',
+              'browserstack.user' : 'USERNAME',
+              'browserstack.key' : 'ACCESS_KEY'
+            }
+
+            return new webdriver.Builder().
+              usingServer('http://hub.browserstack.com/wd/hub').
+              withCapabilities(capabilities).
+              build();
+          }
         },
         src: ['./folderInWhichTheHuxleyfileJsonResides',
               '/folder2WithNestedFolders/**']
