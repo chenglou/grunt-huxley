@@ -1,5 +1,8 @@
+### 0.2.3 (March 27th 2014)
+- Bump huxley (third-party driver support. See README).
+
 ### 0.2.2 (March 12th 2014)
-- Bump huxley (fixed a big)
+- Bump huxley (fixed a big),
 
 ## 0.2.0 (March 10th 2014)
 - Update Huxley. It's got API changes, so minor bump.

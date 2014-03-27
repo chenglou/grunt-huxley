@@ -86,7 +86,8 @@ module.exports = function(grunt) {
 };
 ```
 
-#### [BrowserStack](http://www.browserstack.com):
+#### Third-Party Driver, e.g. [BrowserStack](http://www.browserstack.com):
+
 ```js
 var webdriver = require('browserstack-webdriver');
 
