@@ -1,3 +1,6 @@
+### 0.2.4 (April 6th 2014)
+- Bump huxley (third-party driver fix: https://github.com/chenglou/grunt-huxley/pull/4).
+
 ### 0.2.3 (March 27th 2014)
 - Bump huxley (third-party driver support. See README).
 

@@ -1,7 +1,7 @@
 {
   "name": "grunt-huxley",
   "description": "Grunt task for node-huxley.",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "homepage": "https://github.com/chenglou/grunt-huxley",
   "author": {
     "name": "chenglou",
