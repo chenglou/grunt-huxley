@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     var path = this.filesSrc;
 
     if (this.options().driver) {
-      huxley.injectDriver(this.options().driver());
+      huxley.injectDriver(this.options().driver);
     }
 
     var done = this.async();
