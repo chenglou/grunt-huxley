@@ -1,7 +1,7 @@
 {
   "name": "grunt-huxley",
   "description": "Grunt task for node-huxley.",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "homepage": "https://github.com/chenglou/grunt-huxley",
   "author": {
     "name": "chenglou",
@@ -25,14 +25,8 @@
   "engines": {
     "node": ">= 0.8.0"
   },
-  "scripts": {
-    "test": "grunt test"
-  },
   "devDependencies": {
-    "grunt": "~0.4.1"
-  },
-  "peerDependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "^0.4.1"
   },
   "keywords": [
     "grunt",
@@ -44,6 +38,6 @@
     "front"
   ],
   "dependencies": {
-    "huxley": "~0.7.4"
+    "huxley": "~0.8.1"
   }
 }

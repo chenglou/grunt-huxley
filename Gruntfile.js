@@ -8,23 +8,20 @@
 
 'use strict';
 
+// Just a small test
 module.exports = function(grunt) {
   grunt.initConfig({
     huxley: {
       all: {
         options: {
-          action: 'record'
+          action: 'recordTasks'
         },
-        src: ['./tests/passes/**']
-      },
-      errors: {
-        // should fail right on the first test
-        src: ['./tests/fails/**']
+        src: ['./test/Huxleyfile.json']
       }
     }
   });
 
   grunt.loadTasks('tasks');
 
-  grunt.registerTask('default', ['huxley:all', 'huxley:errors']);
+  grunt.registerTask('default', ['huxley:all']);
 };
